@@ -1,0 +1,11 @@
+#marksplugin {
+    display: block;
+    float: right;
+}
+
+#marksplugin .level {
+    vertical-align: 60%;
+    margin-left: -35px;
+    font-family: Arial;
+    font-size: 12px;
+}
