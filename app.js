@@ -8,6 +8,8 @@ var express = require('express')
   , arDroneConstants = require('ar-drone/lib/constants')
   ;
   
+  // mark added Opener below
+  
 // Adding opener to get a browser window open on localhost:3000 automatically
 var opener = require("opener");
 console.log("opener initiated");
