@@ -6,9 +6,8 @@ public class DroneWifi {
    
         public static void main() throws IOException {        
 
-        String wifi = "ardrone2_062272";
-        Process changeNetwork;        
-        changeNetwork = Runtime.getRuntime().exec("cmd /C netsh wlan connect " + wifi);
+        String wifi = "ardrone2_062272";     
+        Process changeNetwork = Runtime.getRuntime().exec("cmd /C netsh wlan connect " + wifi);
 
     }
     

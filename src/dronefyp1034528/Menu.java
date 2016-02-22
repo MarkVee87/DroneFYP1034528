@@ -9,8 +9,8 @@ public final class Menu {
         System.out.println("Marks first step to completing his FYP and degree!");
         System.out.println("Would you like to see all the desktop items using dir?");
         System.out.println("1 - Yes");
-        System.out.println("2 - Establish WiFi with drone");
-        System.out.println("3 - Quick drone flight instead");
+        System.out.println("2 - Quick drone flight instead");
+        System.out.println("3 - Reconnect to Wifi@Brunel");
         System.out.println("4 - Compare 2 images");
         System.out.println("5 - Exit" + "\n");
         
@@ -28,16 +28,17 @@ public final class Menu {
                 ShowFileContents.showDir();
                 DroneFYP1034528.main(null);
                 break;
-            }
+            }          
             case 2:
             {
                 DroneWifi.main();
+                StartWebflight.SWF();
                 DroneFYP1034528.main(null);
                 break;
             }
             case 3:
             {
-                StartWebflight.SWF();
+                WifiBrunel.main();
                 DroneFYP1034528.main(null);
                 break;
             }

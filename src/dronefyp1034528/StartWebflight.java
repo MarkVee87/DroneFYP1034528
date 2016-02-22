@@ -8,7 +8,7 @@ public class StartWebflight {
     
     static Process p = null;
     
-    public static void SWF() {
+    public static void SWF() {        
         ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "start", "node", "C:\\droneFYP\\DroneFYP1034528\\app.js");
         pb.redirectErrorStream(true);
         
