@@ -72,14 +72,14 @@ public class compareImages {
 
         // TODO add tolerance by giving the below if statement a threshold of +/- 10 when comparing RGB? Too fine-tuned at the minute
         if (argb1 != argb2){
-            System.out.println("row: " + (x+1) + " " + "column: " + (y+1) + " ARE NOT EQUAL");
+            System.out.println("\nrow: " + (x+1) + " " + "column: " + (y+1) + " ARE NOT EQUAL");
             counter(false);
         }
         else {
-            System.out.println("row: " +(x+1) + " " + "column: " + (y+1) + " are equal");
+            System.out.println("\nrow: " +(x+1) + " " + "column: " + (y+1) + " are equal");
             counter(true);
         }
-
+        
         // Byte array to store RGB value of each pixel
         int rgb[] = new int[]{
                 (argb1 >> 16) & 0xff, // third octet = red
@@ -88,7 +88,7 @@ public class compareImages {
         };
 
         // Outputting the values to the user
-        System.out.println("rgb for pixel in row " + (x + 1) + ", column " + (y + 1) + " -> " + rgb[0] + " " + rgb[1] + " " + rgb[2]);
+        System.out.println("rgb for pixel = " + rgb[0] + " " + rgb[1] + " " + rgb[2]);
         return rgb;
     }
 
