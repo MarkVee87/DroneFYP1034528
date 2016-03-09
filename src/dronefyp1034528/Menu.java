@@ -50,7 +50,8 @@ public final class Menu {
             }                  
             case 5:
             {
-                // "5 - Output old, new and difference images"
+                OverlayDiff.OverlayOutput();
+                JPanelOutput.outputImg();
                 DroneFYP1034528.main(null);
                 break;
             } 
