@@ -45,7 +45,7 @@ public final class Menu {
             case 4:
             {
                 CompImages.CI();
-                //DroneFYP1034528.main(null);
+                DroneFYP1034528.main(null);
                 break;
             }                  
             case 5:
