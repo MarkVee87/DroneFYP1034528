@@ -44,12 +44,14 @@ public final class Menu {
             }
             case 4:
             {
-                // "4 - Compare 2 images (new image output)"
+                CompImages.CI();
+                //DroneFYP1034528.main(null);
                 break;
             }                  
             case 5:
             {
                 // "5 - Output old, new and difference images"
+                DroneFYP1034528.main(null);
                 break;
             } 
             case 6:
