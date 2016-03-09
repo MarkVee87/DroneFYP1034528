@@ -9,10 +9,12 @@ public final class Menu {
         System.out.println("Marks first step to completing his FYP and degree!");
         System.out.println("Would you like to see all the desktop items using dir?");
         System.out.println("1 - Yes");
-        System.out.println("2 - Quick drone flight instead");
+        System.out.println("2 - Connect to drone and run WebFlight");
         System.out.println("3 - Reconnect to Wifi@Brunel");
-        System.out.println("4 - Compare 2 images");
-        System.out.println("5 - Exit" + "\n");
+        System.out.println("4 - Compare 2 images (console output)");
+        System.out.println("5 - Compare 2 images (new image output)");
+        System.out.println("6 - Output old, new and difference images");
+        System.out.println("7 - Exit" + "\n");
         
         Scanner MenuChoice = new Scanner(System.in);
         int ChosenOption = MenuChoice.nextInt();
