@@ -12,7 +12,7 @@ public final class Menu {
         System.out.println("2 - Reconnect to Wifi@Brunel");
         System.out.println("3 - Compare 2 images (console output)");
         System.out.println("4 - Compare 2 images (new image output)");
-        System.out.println("5 - Output old, new and difference images");
+        System.out.println("5 - Output JPanel overlaying diff and after image");
         System.out.println("6 - Exit" + "\n");
         
         Scanner MenuChoice = new Scanner(System.in);
@@ -63,7 +63,7 @@ public final class Menu {
             } 
             default:
             {
-                System.out.println("Incorrect entry, please choose an option between 1 and 4");
+                System.out.println("Incorrect entry, please choose an option between 1 and 6");
                 DroneFYP1034528.main(null);
             }
         }        
