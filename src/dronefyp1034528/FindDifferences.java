@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class FindDiff {
+public class FindDifferences {
     
     public static BufferedImage getDifferenceImage(BufferedImage img1, BufferedImage img2) throws IOException {
         

@@ -16,7 +16,7 @@ public class CompImages {
     
     BufferedImage img1 = ImageIO.read(new File(image1)), img2 = ImageIO.read(new File(image2));
     
-    BufferedImage outImg = FindDiff.getDifferenceImage(img1, img2);
+    BufferedImage outImg = FindDifferences.getDifferenceImage(img1, img2);
     
     final long endTime = System.currentTimeMillis();
     System.out.println("Total execution time: " + (endTime - startTime) + "ms");

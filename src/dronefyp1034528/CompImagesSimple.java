@@ -5,7 +5,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
-public class compareImages {
+public class CompImagesSimple {
 
     static long startTime = System.currentTimeMillis();
     static double goodPix = 0;

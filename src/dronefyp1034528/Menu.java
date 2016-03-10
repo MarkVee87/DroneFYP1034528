@@ -26,20 +26,20 @@ public final class Menu {
         switch (i) {          
             case 1:
             {
-                DroneWifi.main();
+                ChangeWifi.main("ardrone2_062272");
                 StartWebflight.SWF();
                 DroneFYP1034528.main(null);
                 break;
             }
             case 2:
             {
-                WifiBrunel.main();
+                ChangeWifi.main("Wifi@Brunel");
                 DroneFYP1034528.main(null);
                 break;
             }
             case 3:
             {        
-                compareImages.compare();                
+                CompImagesSimple.compare();                
                 break;
             }
             case 4:
@@ -51,6 +51,7 @@ public final class Menu {
             case 5:
             {
                 OverlayDiff.OverlayOutput();
+                // TODO upgrade JPanelOutput to just take any image URI for output
                 JPanelOutput.outputImg();
                 DroneFYP1034528.main(null);
                 break;
