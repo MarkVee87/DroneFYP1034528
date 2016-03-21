@@ -52,7 +52,6 @@ public class FindDifferences {
             diff /= 3;            
                      
             // Tolerance variables
-            int diffTolRed = 30;
             int diffTolOrange = 25;
             int diffTolYellow = 20;
             int diffTolGreen = 15; 
@@ -64,7 +63,7 @@ public class FindDifferences {
             Color green = new Color(0, 255, 0);
             Color trans = new Color(0, 0, 0, 0);
             
-            if (diff <= diffTolRed && diff > diffTolOrange){
+            if (diff > diffTolOrange){
                 // make pixel red
                 result = Red.getRGB();
                 outImg.setRGB(j, i, result);
@@ -91,6 +90,7 @@ public class FindDifferences {
             }            
         }
     }
+    
     // Creating diff png and return return
     ImageIO.write(outImg, "PNG", new File("./dronecomparisonimages\\masks\\diffheatmap.png"));
     return outImg;
