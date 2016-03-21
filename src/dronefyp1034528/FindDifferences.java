@@ -92,7 +92,7 @@ public class FindDifferences {
         }
     }
     // Creating diff png and return return
-    ImageIO.write(outImg, "PNG", new File("C:\\Users\\Mark\\Desktop\\DroneFYP\\dronecomparisonimages\\masks\\diffheatmap.png"));
+    ImageIO.write(outImg, "PNG", new File("./dronecomparisonimages\\masks\\diffheatmap.png"));
     return outImg;
     }    
     // TODO overlay the diff image with transparent background on top of the second image to show differences    

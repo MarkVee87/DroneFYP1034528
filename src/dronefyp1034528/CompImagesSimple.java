@@ -12,8 +12,8 @@ public class CompImagesSimple {
     static double badPix = 0;
 
     public static void compare() {
-        String sImage1 = "C:\\Users\\Mark\\Desktop\\DroneFYP\\droneimages\\testimages\\vsmall1.png";
-        String sImage2 = "C:\\Users\\Mark\\Desktop\\DroneFYP\\droneimages\\testimages\\vsmall2.png";
+        String sImage1 = "./droneimages\\testimages\\vsmall1.png";
+        String sImage2 = "./droneimages\\testimages\\vsmall2.png";
 
         BufferedImage testImage1, testImage2;
 

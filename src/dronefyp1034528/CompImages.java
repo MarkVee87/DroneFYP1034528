@@ -11,8 +11,8 @@ public class CompImages {
     
     public static void CI() throws IOException{        
     
-    String image1 = "C:\\Users\\Mark\\Desktop\\DroneFYP\\droneimages\\testimages\\drone1.png";
-    String image2 = "C:\\Users\\Mark\\Desktop\\DroneFYP\\droneimages\\testimages\\drone2.png";
+    String image1 = "./droneimages\\testimages\\drone1.png";
+    String image2 = "./droneimages\\testimages\\drone2.png";
     
     BufferedImage img1 = ImageIO.read(new File(image1)), img2 = ImageIO.read(new File(image2));
     
