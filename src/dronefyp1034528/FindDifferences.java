@@ -21,7 +21,7 @@ public class FindDifferences {
     }
 
     // New BufferedImage to store the image showing differences between input images
-    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_RGB);   
+    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_ARGB);   
     
     int diff;
     int result; // Stores output pixel
@@ -52,18 +52,43 @@ public class FindDifferences {
             diff /= 3;            
                      
             // Tolerance variable
-            int diffTolerance = 0;
-            
-            if (diff > diffTolerance){
+            //int diffTolerance = 15;
+            int diffTolRed = 30;
+            int diffTolOrange = 25;
+            int diffTolYellow = 20;
+            int diffTolGreen = 15;            
+                        
+            if (diff <= diffTolRed && diff > diffTolOrange){
+                // make pixel red
+                Color red = new Color(255, 0, 0);
+                int rd = red.getRGB();
+                result = rd;
+                outImg.setRGB(j, i, result);
+            }
+            else if (diff <= diffTolOrange && diff > diffTolYellow){
+                // make pixel orange
+                Color orange = new Color(255, 165, 0);
+                int org = orange.getRGB();
+                result = org;
+                outImg.setRGB(j, i, result);
+            }
+            else if (diff <= diffTolYellow && diff > diffTolGreen){
                 // make pixel yellow
                 Color yellow = new Color(255, 255, 0);
                 int yel = yellow.getRGB();
                 result = yel;
                 outImg.setRGB(j, i, result);
             }
+            else if (diff <= diffTolGreen && diff > 5){
+                // make pixel green
+                Color green = new Color(0, 255, 0);
+                int grn = green.getRGB();
+                result = grn;
+                outImg.setRGB(j, i, result);
+            }
             else{             
                 // make pixel transparent
-                Color trans = new Color(0, 0, 0);
+                Color trans = new Color(0, 0, 0, 0);
                 int t = trans.getRGB();
                 result = t;
                 outImg.setRGB(j, i, result);                
@@ -71,7 +96,7 @@ public class FindDifferences {
         }
     }
     // Creating diff png and return return
-    ImageIO.write(outImg, "PNG", new File("C:\\Users\\Mark\\Desktop\\DroneFYP\\dronecomparisonimages\\masks\\diff.png"));
+    ImageIO.write(outImg, "PNG", new File("C:\\Users\\Mark\\Desktop\\DroneFYP\\dronecomparisonimages\\masks\\diffheatmap.png"));
     return outImg;
     }    
     // TODO overlay the diff image with transparent background on top of the second image to show differences    
