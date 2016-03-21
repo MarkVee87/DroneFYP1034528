@@ -27,7 +27,7 @@ public class OverlayDiff {
             final BufferedImage finalImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
             Graphics2D g = finalImage.createGraphics();
             g.drawImage(aft, 0, 0, null);
-            g.drawImage(diff, 0, 0, null);            
+            g.drawImage(diff, 0, 0, null);
 
             File out = new File("C:\\Users\\Mark\\Desktop\\difference.png");
             ImageIO.write(finalImage, "PNG", out);

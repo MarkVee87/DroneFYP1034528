@@ -21,7 +21,7 @@ public class FindDifferences {
     }
 
     // New BufferedImage to store the image showing differences between input images
-    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_ARGB);   
+    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_RGB);   
     
     int diff;
     int result; // Stores output pixel
@@ -52,7 +52,7 @@ public class FindDifferences {
             diff /= 3;            
                      
             // Tolerance variable
-            int diffTolerance = 10;
+            int diffTolerance = 0;
             
             if (diff > diffTolerance){
                 // make pixel yellow
@@ -63,7 +63,7 @@ public class FindDifferences {
             }
             else{             
                 // make pixel transparent
-                Color trans = new Color(255, 0, 0, 0);
+                Color trans = new Color(0, 0, 0);
                 int t = trans.getRGB();
                 result = t;
                 outImg.setRGB(j, i, result);                
