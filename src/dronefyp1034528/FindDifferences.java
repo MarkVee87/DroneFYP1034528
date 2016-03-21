@@ -51,46 +51,42 @@ public class FindDifferences {
             // Now the diff value is divided by three to give a value between 0 and 255
             diff /= 3;            
                      
-            // Tolerance variable
-            //int diffTolerance = 15;
+            // Tolerance variables
             int diffTolRed = 30;
             int diffTolOrange = 25;
             int diffTolYellow = 20;
-            int diffTolGreen = 15;            
-                        
+            int diffTolGreen = 15;      
+            
+            // Colour options to change pixels to
+            Color Red = new Color(255,0,0);
+            Color orange = new Color(255, 165, 0);
+            Color yellow = new Color(255, 255, 0);  
+            Color green = new Color(0, 255, 0);
+            Color trans = new Color(0, 0, 0, 0);
+            
             if (diff <= diffTolRed && diff > diffTolOrange){
                 // make pixel red
-                Color red = new Color(255, 0, 0);
-                int rd = red.getRGB();
-                result = rd;
+                result = Red.getRGB();
                 outImg.setRGB(j, i, result);
             }
             else if (diff <= diffTolOrange && diff > diffTolYellow){
                 // make pixel orange
-                Color orange = new Color(255, 165, 0);
-                int org = orange.getRGB();
-                result = org;
+                result = orange.getRGB();
                 outImg.setRGB(j, i, result);
             }
             else if (diff <= diffTolYellow && diff > diffTolGreen){
                 // make pixel yellow
-                Color yellow = new Color(255, 255, 0);
-                int yel = yellow.getRGB();
-                result = yel;
+                result = yellow.getRGB();
                 outImg.setRGB(j, i, result);
             }
             else if (diff <= diffTolGreen && diff > 5){
                 // make pixel green
-                Color green = new Color(0, 255, 0);
-                int grn = green.getRGB();
-                result = grn;
+                result = green.getRGB();
                 outImg.setRGB(j, i, result);
             }
             else{             
                 // make pixel transparent
-                Color trans = new Color(0, 0, 0, 0);
-                int t = trans.getRGB();
-                result = t;
+                result = trans.getRGB();
                 outImg.setRGB(j, i, result);                
             }            
         }
