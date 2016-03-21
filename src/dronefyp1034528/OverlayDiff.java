@@ -13,8 +13,8 @@ public class OverlayDiff {
         try{
             // takes "after" image as well as the image with transparent bg (diff) to output a visual of change
             // String before = ("C:\\Users\\Mark\\Desktop\\drone1.png");
-            String after = ("C:\\Users\\Mark\\Desktop\\drone2.png");
-            String difference = ("C:\\Users\\Mark\\Desktop\\diff10trans.png");
+            String after = ("C:\\Users\\Mark\\Desktop\\DroneFYP\\droneimages\\testimages\\drone2.png");
+            String difference = ("C:\\Users\\Mark\\Desktop\\DroneFYP\\dronecomparisonimages\\masks\\diff10trans.png");
             // BufferedImage bef = ImageIO.read(new File (before));
             BufferedImage aft = ImageIO.read(new File (after));
             BufferedImage diff = ImageIO.read(new File (difference));
@@ -29,7 +29,7 @@ public class OverlayDiff {
             g.drawImage(aft, 0, 0, null);
             g.drawImage(diff, 0, 0, null);
 
-            File out = new File("C:\\Users\\Mark\\Desktop\\difference.png");
+            File out = new File("C:\\Users\\Mark\\Desktop\\DroneFYP\\dronecomparisonimages\\layeredimages\\finaldifference.png");
             ImageIO.write(finalImage, "PNG", out);
             g.dispose();
         }
