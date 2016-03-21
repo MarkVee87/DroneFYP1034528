@@ -56,7 +56,7 @@ public class FindDifferences {
             int diffTolRed = 30;
             int diffTolOrange = 25;
             int diffTolYellow = 20;
-            int diffTolGreen = 15;            
+            int diffTolGreen = 15;
                         
             if (diff <= diffTolRed && diff > diffTolOrange){
                 // make pixel red
