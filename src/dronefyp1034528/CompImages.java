@@ -11,10 +11,12 @@ public class CompImages {
     
     public static void CI() throws IOException{ 
     
-    String image1 = "./droneimages\\testimages\\dronecomplex1.png";
-    String image2 = "./droneimages\\testimages\\dronecomplex2 _3px shift.png";
+    String image1 = "./droneimages\\testimages\\me1.png";
+    String image2 = "./droneimages\\testimages\\me2.png";
     
     BufferedImage img1 = ImageIO.read(new File(image1)), img2 = ImageIO.read(new File(image2));
+    
+    final BufferedImage outImg = FindDifferences.getDifferenceImage(img1, img2);
     
     final long endTime = System.currentTimeMillis();
     System.out.println("Total execution time: " + (endTime - startTime) + "ms");
