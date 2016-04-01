@@ -129,6 +129,7 @@ public class FrontEndGUI extends javax.swing.JFrame {
 
     private void SWFButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SWFButtonActionPerformed
         try {
+            // amend the string to the wifi name (profile, SSID) of the drone being used
             ChangeWifi.main("ardrone2_062272");
         } catch (IOException ex) {
             Logger.getLogger(FrontEndGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -138,6 +139,7 @@ public class FrontEndGUI extends javax.swing.JFrame {
 
     private void ReconWifIButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReconWifIButtonActionPerformed
         try {
+            // this will change the WiFi network back to Wifi@Brunel, change to required WiFi network name
             ChangeWifi.main("Wifi@Brunel");
         } catch (IOException ex) {
             Logger.getLogger(FrontEndGUI.class.getName()).log(Level.SEVERE, null, ex);

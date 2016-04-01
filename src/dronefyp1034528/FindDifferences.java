@@ -20,20 +20,16 @@ public class FindDifferences {
         System.exit(1);
     }
 
-    // New BufferedImage to store the image showing differences between input images
-    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_ARGB);   
+    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_RGB);   
     
-    int diff;
-    int result; // Stores output pixel
+    int diff, result;
     
     for (int i = 0; i < height1; i++) {
         for (int j = 0; j < width1; j++) {
             
-            // Registering the RGB values of each image at position [i][j] for comparison
             int rgb1 = img1.getRGB(j, i);
             int rgb2 = img2.getRGB(j, i);
             
-            // Accessing the octet (byte) values for each images' RGB values
             int r1 = (rgb1 >> 16) & 0xff;
             int g1 = (rgb1 >> 8) & 0xff;
             int b1 = (rgb1) & 0xff;
@@ -42,21 +38,16 @@ public class FindDifferences {
             int g2 = (rgb2 >> 8) & 0xff;
             int b2 = (rgb2) & 0xff;
             
-            // Checking the difference between the pixel r, g, and b values seperately
-            // Then adding them together to get a total diff value per pixel
             diff = Math.abs(r1 - r2);
             diff += Math.abs(g1 - g2);
             diff += Math.abs(b1 - b2);
             
-            // Now the diff value is divided by three to give a value between 0 and 255
             diff /= 3;            
                      
-            // Tolerance variables
             int diffTolOrange = 25;
             int diffTolYellow = 20;
             int diffTolGreen = 15; 
             
-            // Colour options to change pixels to
             Color Red = new Color(255,0,0);
             Color orange = new Color(255, 165, 0);
             Color yellow = new Color(255, 255, 0);  
@@ -87,13 +78,12 @@ public class FindDifferences {
                 // make pixel transparent
                 result = trans.getRGB();
                 outImg.setRGB(j, i, result);                
-            }            
+            }          
         }
     }
     
     // Creating diff png and return return
     ImageIO.write(outImg, "PNG", new File("./dronecomparisonimages\\masks\\diffheatmap.png"));
     return outImg;
-    }    
-    // TODO overlay the diff image with transparent background on top of the second image to show differences    
+    }     
 }
