@@ -11,7 +11,7 @@ public class OverlayDiff {
     public static void OverlayOutput(){
         
         try{
-            String after = ("./droneimages\\testimages\\me2.png");
+            String after = ("./droneimages\\testimages\\drone2.png");
             String difference = ("./dronecomparisonimages\\masks\\diffheatmap.png");
             BufferedImage aft = ImageIO.read(new File (after));
             BufferedImage diff = ImageIO.read(new File (difference));
