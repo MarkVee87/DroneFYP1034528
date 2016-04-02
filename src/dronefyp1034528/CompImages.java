@@ -27,12 +27,12 @@ public class CompImages {
         }
     }
 
-    public static boolean dimCheck(BufferedImage a, BufferedImage b){
+    public static boolean dimCheck(BufferedImage before, BufferedImage after){
 
-        imgW1 = a.getWidth();
-        imgH1 = a.getHeight();
-        imgW2 = b.getWidth();
-        imgH2 = b.getHeight();
+        imgW1 = before.getWidth();
+        imgH1 = before.getHeight();
+        imgW2 = after.getWidth();
+        imgH2 = after.getHeight();
 
         if((imgW1 != imgW2) || (imgH1 != imgH2)){
             System.out.println("Error: Images are different dimensiosns");
@@ -83,7 +83,7 @@ public class CompImages {
         Color orange = Color.orange;
         Color yellow = Color.yellow;
         Color green = Color.green;
-        Color trans = new Color(255, 0, 0, 0);
+        Color trans = new Color(0, 0, 0, 0);
 
         if(difference > OrangeDiff){
             difference = red.getRGB();
