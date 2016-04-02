@@ -111,20 +111,3 @@ public class CompImages {
         return bi;
     }
 }
-
-
-    /*
-    static long startTime = System.currentTimeMillis();
-    
-    public static void CI() throws IOException, Exception{ 
-    
-    String image1 = "./droneimages\\testimages\\me1.png";
-    String image2 = "./droneimages\\testimages\\me2.png";
-    
-    BufferedImage img1 = ImageIO.read(new File(image1)), img2 = ImageIO.read(new File(image2));
-    
-    FindDifferences.getDifferenceImage(img1, img2);
-    
-    final long endTime = System.currentTimeMillis();
-    System.out.println("Total execution time: " + (endTime - startTime) + "ms");
-    }   */
