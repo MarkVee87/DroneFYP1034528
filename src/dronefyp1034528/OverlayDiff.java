@@ -19,10 +19,9 @@ public class OverlayDiff {
             int w = aft.getWidth();
             int h = aft.getHeight();
 
-            // Composes final images as a combination of the two images above
-            // Layers them on top of each other
             final BufferedImage finalImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
             Graphics2D g = finalImage.createGraphics();
+            
             g.drawImage(aft, 0, 0, null);
             g.drawImage(diff, 0, 0, null);
 

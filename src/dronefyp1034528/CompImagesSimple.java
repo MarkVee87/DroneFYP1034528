@@ -12,6 +12,7 @@ public class CompImagesSimple {
     static double badPix = 0;
 
     public static void compare() {
+        
         String sImage1 = "./droneimages\\testimages\\vsmall1.png";
         String sImage2 = "./droneimages\\testimages\\vsmall2.png";
 
@@ -26,11 +27,9 @@ public class CompImagesSimple {
             int tImage2W = testImage2.getWidth();
             int tImage2H = testImage2.getHeight();
 
-            // create integer array to hold pixel values
             int[][] pixels = new int[tImage1H * tImage1W][3];
             int [] rgb;
 
-            // check images are the same size
             if ((tImage1W != tImage2W) || (tImage1H != tImage2H)){
                 System.out.println("Images are not of the same dimensions so cannot compare...");
             }
@@ -66,11 +65,9 @@ public class CompImagesSimple {
 
     private static int[] CompareAndOutputPixelValues(BufferedImage tImage1, BufferedImage tImage2, int x, int y) {
 
-        // Getting a pixel from the image according to for loop above
         int argb1 = tImage1.getRGB(y,x);
         int argb2 = tImage2.getRGB(y,x);
-
-        // TODO add tolerance by giving the below if statement a threshold of +/- 10 when comparing RGB? Too fine-tuned at the minute
+        
         if (argb1 != argb2){
             System.out.println("\nrow: " + (x+1) + " " + "column: " + (y+1) + " ARE NOT EQUAL");
             counter(false);
@@ -80,11 +77,10 @@ public class CompImagesSimple {
             counter(true);
         }
         
-        // Byte array to store RGB value of each pixel
         int rgb[] = new int[]{
-                (argb1 >> 16) & 0xff, // third octet = red
-                (argb1 >> 8) & 0xff, // second octet = green
-                (argb1) & 0xff // first octet = blue
+                (argb1 >> 16) & 0xff,
+                (argb1 >> 8) & 0xff,
+                (argb1) & 0xff
         };
 
         // Outputting the values to the user

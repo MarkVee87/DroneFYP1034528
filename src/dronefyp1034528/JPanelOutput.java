@@ -16,9 +16,10 @@ public class JPanelOutput {
         
         String fimage = ("./dronecomparisonimages\\layeredimages\\finaldifference.png");
         BufferedImage finalimg = ImageIO.read(new File (fimage));
+        
         JPanel diffImage = new JPanel(new GridLayout(1, 1, 3, 3));
         diffImage.add(new JLabel(new ImageIcon(finalimg)));
-        JOptionPane.showMessageDialog(null, diffImage, "Difference Overlay", JOptionPane.INFORMATION_MESSAGE);
         
+        JOptionPane.showMessageDialog(null, diffImage, "Difference Overlay", JOptionPane.INFORMATION_MESSAGE);        
     }   
 }
