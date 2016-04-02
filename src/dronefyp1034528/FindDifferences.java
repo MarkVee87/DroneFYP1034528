@@ -20,7 +20,7 @@ public class FindDifferences {
         System.exit(1);
     }
 
-    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_RGB);   
+    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_ARGB);   
     
     int diff, result;
     
@@ -48,10 +48,10 @@ public class FindDifferences {
             int diffTolYellow = 20;
             int diffTolGreen = 15; 
             
-            Color Red = new Color(255,0,0);
-            Color orange = new Color(255, 165, 0);
-            Color yellow = new Color(255, 255, 0);  
-            Color green = new Color(0, 255, 0);
+            Color Red = Color.red;
+            Color orange = Color.orange;
+            Color yellow = Color.yellow;  
+            Color green = Color.green;
             Color trans = new Color(0, 0, 0, 0);
             
             if (diff > diffTolOrange){
