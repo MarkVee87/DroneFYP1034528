@@ -8,8 +8,11 @@ import javax.imageio.ImageIO;
 
 public class FindDifferences {
     
+    static int image1, image2;
+    static int width1, width2;
+    
     public static BufferedImage getDifferenceImage(BufferedImage img1, BufferedImage img2) throws IOException {
-        
+    
     int width1 = img1.getWidth();
     int width2 = img2.getWidth();
     int height1 = img1.getHeight();

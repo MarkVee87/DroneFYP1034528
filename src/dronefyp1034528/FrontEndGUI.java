@@ -152,7 +152,7 @@ public class FrontEndGUI extends javax.swing.JFrame {
 
     private void CompNewImageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompNewImageButtonActionPerformed
         try {
-            CompImages.CI();
+            CompImages.main();
         } catch (IOException ex) {
             Logger.getLogger(FrontEndGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
