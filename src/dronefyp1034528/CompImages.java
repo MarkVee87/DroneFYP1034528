@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class CompImages {
 
-    static int imgW1, imgW2;
+    static int imgW1, imgW2; 
     static int imgH1, imgH2;
     static String imgLocation1, imgLocation2;
     static BufferedImage img1, img2;
@@ -60,9 +60,9 @@ public class CompImages {
                 int green2 = (rgb2 >> 8) & 0xff;
                 int blue2 = (rgb2) & 0xff;
 
-                int diff = (red1 - red2);
-                diff += (green1 - green2);
-                diff += (blue1 - blue2);
+                int diff = Math.abs(red1 - red2);
+                diff += Math.abs(green1 - green2);
+                diff += Math.abs(blue1 - blue2);
                 
                 diff /= 3;
 
@@ -83,7 +83,7 @@ public class CompImages {
         Color orange = Color.orange;
         Color yellow = Color.yellow;
         Color green = Color.green;
-        Color trans = new Color(0, 0, 0, 0);
+        Color trans = new Color(255, 0, 0, 0);
 
         if(difference > OrangeDiff){
             difference = red.getRGB();
