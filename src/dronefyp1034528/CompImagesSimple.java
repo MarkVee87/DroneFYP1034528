@@ -5,6 +5,14 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
+/*
+N.B. This class demonstrates the original method of comparing images (console input)
+but also demonstrates the original way in which it was coded, using an additional array
+this was found unnccessary when working on CompImages.java so was removed at that point
+Kept it in here to show that the method of storgin RGB etc evolved as well as the output
+*/
+
+
 public class CompImagesSimple {
 
     static long startTime = System.currentTimeMillis();
